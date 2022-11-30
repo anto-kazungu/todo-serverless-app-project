@@ -69,16 +69,12 @@ export class TodosAccess {
                 todoId,
                 userId
             },
-            UpdateExpression: 'set #name = :name, dueDate = :dueDate, done = :done',
+            UpdateExpression: 'set attachmentUrl = :attachmentUrl',
             ExpressionAttributeValues: {
-                ':name': todoUpdate.name,
-                ':dueDate': todoUpdate.dueDate,
-                ':done': todoUpdate.done
+                ':attachmentUrl': todoUpdate.attachmentUrl,
             },
-            ExpressionAttributeNames: {
-                '#name': 'name'
-            },
-            ReturnValues: 'ALL_NEW'
+           
+            ReturnValues: 'UPDATED_NEW'
         })
         .promise()
 

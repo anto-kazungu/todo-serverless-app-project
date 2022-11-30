@@ -27,7 +27,8 @@ export const handler = middy(
         headers: {
           "Access-Control-Allow-Origin": "*"
         },
-        body: ''
+        
+        body:''
     }
   }
 )
